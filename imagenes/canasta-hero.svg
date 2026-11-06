@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 420" width="480" height="420" role="img" aria-label="Canasta navideña con panetón, vino y mermelada">
+  <!-- destellos -->
+  <g fill="#D9A441">
+    <path d="M62 70 L66 82 L78 86 L66 90 L62 102 L58 90 L46 86 L58 82Z"/>
+    <path d="M425 48 L428 57 L437 60 L428 63 L425 72 L422 63 L413 60 L422 57Z"/>
+    <path d="M418 165 L421 172 L428 175 L421 178 L418 185 L415 178 L408 175 L415 172Z"/>
+    <path d="M70 185 L73 192 L80 195 L73 198 L70 205 L67 198 L60 195 L67 192Z"/>
+  </g>
+  <!-- sombra -->
+  <ellipse cx="240" cy="408" rx="175" ry="9" fill="#000" opacity=".25"/>
+  <!-- asa -->
+  <path d="M92 215 C92 15 388 15 388 215" fill="none" stroke="#C98F4A" stroke-width="14" stroke-linecap="round"/>
+  <path d="M92 215 C92 21 388 21 388 215" fill="none" stroke="#E0AE6A" stroke-width="4" stroke-linecap="round"/>
+  <!-- ramas de pino -->
+  <g stroke="#3C9A6E" stroke-width="7" stroke-linecap="round">
+    <path d="M150 205 L95 150"/><path d="M160 205 L120 125"/><path d="M170 205 L150 110"/>
+    <path d="M330 205 L385 150"/><path d="M320 205 L360 125"/><path d="M310 205 L330 110"/>
+  </g>
+  <!-- panetón -->
+  <rect x="122" y="92" width="120" height="130" rx="10" fill="#B3203A"/>
+  <rect x="122" y="92" width="120" height="26" rx="10" fill="#8F1A2F"/>
+  <rect x="122" y="140" width="120" height="24" fill="#D9A441"/>
+  <!-- botella -->
+  <rect x="266" y="78" width="50" height="146" rx="10" fill="#7A1F3D"/>
+  <rect x="281" y="38" width="20" height="50" rx="5" fill="#7A1F3D"/>
+  <rect x="278" y="32" width="26" height="12" rx="3" fill="#D9A441"/>
+  <rect x="270" y="128" width="42" height="48" fill="#F5F8F7"/>
+  <rect x="276" y="146" width="30" height="3" fill="#D9A441"/>
+  <!-- frasco -->
+  <rect x="336" y="138" width="64" height="86" rx="9" fill="#E8C27A"/>
+  <rect x="336" y="130" width="64" height="16" rx="5" fill="#B3203A"/>
+  <!-- cesta -->
+  <path d="M46 202 H434 L398 378 Q394 398 372 398 H108 Q86 398 82 378 Z" fill="#B27A3C"/>
+  <g stroke="#8A5A28" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M58 245 H422"/><path d="M66 285 H414"/><path d="M73 325 H407"/><path d="M80 363 H400"/>
+    <path d="M105 208 L98 392"/><path d="M165 208 L160 394"/><path d="M225 208 V394"/>
+    <path d="M285 208 L290 394"/><path d="M345 208 L352 392"/><path d="M400 208 L388 388"/>
+  </g>
+  <rect x="38" y="192" width="404" height="22" rx="11" fill="#C98F4A"/>
+  <!-- moño -->
+  <path d="M240 300 L172 266 L172 334Z" fill="#B3203A"/>
+  <path d="M240 300 L308 266 L308 334Z" fill="#B3203A"/>
+  <path d="M232 312 L208 376 L230 366 L238 384Z" fill="#8F1A2F"/>
+  <path d="M248 312 L272 376 L250 366 L242 384Z" fill="#8F1A2F"/>
+  <circle cx="240" cy="300" r="16" fill="#8F1A2F"/>
+</svg>
