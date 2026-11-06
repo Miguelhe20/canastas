@@ -17,9 +17,10 @@
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{font-family:var(--body);color:var(--ink);background:var(--snow);line-height:1.6;font-size:1.0625rem}
 img{max-width:100%;display:block}
+a{color:inherit}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .wrap{width:min(1120px,92%);margin-inline:auto}
 h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12}
@@ -31,12 +32,14 @@ h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.6rem}
 .btn.ghost:hover{background:var(--spruce);color:#fff}
 
 .notice{background:var(--berry);color:#fff;text-align:center;font-size:.95rem;padding:.55rem 1rem}
-header{background:var(--spruce);color:#fff}
+header{background:var(--spruce);color:#fff;position:sticky;top:0;z-index:20;border-bottom:3px solid var(--gold)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
-.brand{font-family:var(--display);font-size:1.25rem;text-decoration:none}
-.nav ul{list-style:none;display:flex;gap:1.5rem;padding:0}
-.nav a{text-decoration:none;opacity:.9}
-.nav a:hover{opacity:1;text-decoration:underline}
+.brand{font-family:var(--display);font-size:1.4rem;color:#fff;text-decoration:none;letter-spacing:.01em}
+.nav ul{list-style:none;display:flex;align-items:center;gap:1.6rem;padding:0}
+.nav ul a{font-weight:500;color:#E3EEEA;text-decoration:none;padding:.35rem 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav ul a:hover{color:#fff;border-bottom-color:var(--gold)}
+.nav ul a.cta{background:var(--berry);color:#fff;padding:.5rem 1.15rem;border-radius:999px;border-bottom:0;font-weight:700}
+.nav ul a.cta:hover{background:var(--berry-d)}
 
 .hero{background:var(--spruce);color:#fff;padding:2rem 0 4.5rem}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
@@ -98,7 +101,9 @@ footer a{color:#fff}
   .hero .wrap,.order{grid-template-columns:1fr}
   .steps ol{grid-template-columns:1fr}
   .hero img{width:min(320px,80%);order:-1}
-  .nav ul{display:none}
+  header{position:static}
+  .nav{flex-direction:column;align-items:flex-start;gap:.3rem;padding:.8rem 0}
+  .nav ul{gap:1.1rem;overflow-x:auto;max-width:100%;white-space:nowrap}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 </style>
@@ -114,7 +119,7 @@ footer a{color:#fff}
       <ul>
         <li><a href="#canastas">Canastas</a></li>
         <li><a href="#como">Cómo pedir</a></li>
-        <li><a href="#pedido">Hacer pedido</a></li>
+        <li><a class="cta" href="#pedido">Hacer pedido</a></li>
         <li><a href="#preguntas">Preguntas</a></li>
       </ul>
     </nav>
