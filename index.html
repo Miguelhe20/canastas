@@ -3,67 +3,71 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Canastas navideñas · Pedidos por WhatsApp</title>
-<meta name="description" content="Canastas navideñas armadas a mano para regalar en familia o en la empresa. Elige tu canasta y pide por WhatsApp.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧺</text></svg>">
+<title>Canastas Navideñas Huancayo · Compartimos más que regalos</title>
+<meta name="description" content="Canastas navideñas armadas con productos de la mesa de fin de año. Elige tu canasta y pide por WhatsApp.">
+<link rel="icon" href="imagenes/logo.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Young+Serif&display=swap" rel="stylesheet">
 <style>
 :root{
-  --spruce:#123B33; --spruce-2:#1D5247; --berry:#B3203A; --berry-d:#8F1A2F;
-  --gold:#D9A441; --snow:#F5F8F7; --paper:#FFFFFF; --ink:#1C2B27; --muted:#55645F; --line:#D5DEDB;
+  --spruce:#123B33; --berry:#B3203A; --berry-d:#8F1A2F; --gold:#D9A441;
+  --snow:#F5F8F7; --paper:#fff; --ink:#1C2B27; --muted:#55645F; --line:#D5DEDB;
   --display:"Young Serif",Georgia,"Times New Roman",serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--body);color:var(--ink);background:var(--snow);line-height:1.6;font-size:1.0625rem}
-img,svg{max-width:100%;display:block}
-a{color:inherit}
+img{max-width:100%;display:block}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .wrap{width:min(1120px,92%);margin-inline:auto}
 h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12}
 h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.6rem}
 .lead{color:var(--muted);max-width:56ch}
-.btn{display:inline-block;border:0;cursor:pointer;font:700 1rem var(--body);padding:.9rem 1.5rem;border-radius:999px;text-decoration:none;background:var(--berry);color:#fff;transition:background .2s}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 1rem var(--body);padding:.85rem 1.4rem;border-radius:999px;text-decoration:none;text-align:center;background:var(--berry);color:#fff;transition:background .2s}
 .btn:hover{background:var(--berry-d)}
 .btn.ghost{background:transparent;color:var(--spruce);box-shadow:inset 0 0 0 2px var(--spruce)}
 .btn.ghost:hover{background:var(--spruce);color:#fff}
 
-/* barra de aviso y cabecera */
 .notice{background:var(--berry);color:#fff;text-align:center;font-size:.95rem;padding:.55rem 1rem}
 header{background:var(--spruce);color:#fff}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
-.logo{font-family:var(--display);font-size:1.35rem;text-decoration:none}
+.brand{font-family:var(--display);font-size:1.25rem;text-decoration:none}
 .nav ul{list-style:none;display:flex;gap:1.5rem;padding:0}
 .nav a{text-decoration:none;opacity:.9}
 .nav a:hover{opacity:1;text-decoration:underline}
 
-/* hero */
-.hero{background:var(--spruce);color:#fff;padding:2.5rem 0 4.5rem}
+.hero{background:var(--spruce);color:#fff;padding:2rem 0 4.5rem}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
-.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);margin-bottom:1rem}
+.hero h1{font-size:clamp(2.3rem,5.5vw,4rem);margin-bottom:1rem}
 .hero p{color:#CFE0DA;max-width:46ch;margin-bottom:1.6rem}
 .hero .actions{display:flex;gap:.8rem;flex-wrap:wrap}
 .hero .btn.ghost{color:#fff;box-shadow:inset 0 0 0 2px #fff}
 .hero .btn.ghost:hover{background:#fff;color:var(--spruce)}
+.hero img{width:min(440px,100%);margin-inline:auto}
 
-/* catálogo */
 section{padding:4.5rem 0}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.2rem}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:1.6rem;display:flex;flex-direction:column}
-.card.feat{border:2px solid var(--berry)}
-.card .tag{align-self:flex-start;background:var(--berry);color:#fff;font-size:.85rem;font-weight:700;padding:.15rem .7rem;border-radius:999px;margin-bottom:.8rem}
-.card h3{font-size:1.6rem}
-.card .who{color:var(--muted);font-size:.95rem;margin:.2rem 0 1rem}
-.price{font-family:var(--display);font-size:2.2rem;color:var(--spruce);margin-bottom:1rem}
-.card ul{padding-left:1.2rem;margin-bottom:1.4rem;flex:1}
-.card li{margin-bottom:.35rem}
-.card .btn{text-align:center}
-.small{font-size:.9rem;color:var(--muted);margin-top:1.4rem}
+.familia{margin-top:2.8rem}
+.familia h3{font-size:1.7rem;border-bottom:3px solid var(--gold);padding-bottom:.4rem;display:inline-block}
+.familia > p{color:var(--muted);margin:.5rem 0 1.2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.card .foto{background:#fff;aspect-ratio:3/2;border-bottom:1px solid var(--line)}
+.card .foto img{width:100%;height:100%;object-fit:contain}
+.card .cuerpo{padding:1.2rem 1.4rem 1.4rem;display:flex;flex-direction:column;flex:1}
+.card h4{font-family:var(--display);font-weight:400;font-size:1.5rem}
+.card .para{color:var(--muted);font-size:.95rem}
+.price{font-family:var(--display);font-size:2rem;color:var(--spruce);margin:.4rem 0 .6rem}
+.card details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:.7rem 0;margin-bottom:1rem;flex:1}
+.card summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;color:var(--spruce)}
+.card summary::-webkit-details-marker{display:none}
+.card summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--berry)}
+.card details[open] summary::after{content:"–"}
+.card ul{padding-left:1.2rem;margin-top:.6rem}
+.card li{margin-bottom:.25rem}
+.small{font-size:.9rem;color:var(--muted);margin-top:1.6rem}
 
-/* cómo pedir: secuencia real */
 .steps{background:var(--paper);border-block:1px solid var(--line)}
 .steps ol{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem;counter-reset:s}
 .steps li{counter-increment:s;border-top:3px solid var(--gold);padding-top:1rem}
@@ -71,7 +75,6 @@ section{padding:4.5rem 0}
 .steps h3{font-size:1.3rem;margin-bottom:.3rem}
 .steps p{color:var(--muted)}
 
-/* pedido */
 .order{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
 form{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:1.6rem;display:grid;gap:1rem}
 label{display:grid;gap:.3rem;font-weight:700;font-size:.95rem}
@@ -80,13 +83,12 @@ input,select,textarea{font:400 1rem var(--body);padding:.7rem .8rem;border:1px s
 .total{font-weight:700;color:var(--spruce)}
 .hint{font-size:.9rem;color:var(--muted)}
 
-/* preguntas */
 .faq{max-width:760px}
-details{border-bottom:1px solid var(--line);padding:1rem 0}
-summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
-summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--berry)}
-details[open] summary::after{content:"–"}
-details p{color:var(--muted);margin-top:.6rem}
+.faq details{border-bottom:1px solid var(--line);padding:1rem 0}
+.faq summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--berry)}
+.faq details[open] summary::after{content:"–"}
+.faq p{color:var(--muted);margin-top:.6rem}
 
 footer{background:var(--spruce);color:#CFE0DA;padding:2.5rem 0;font-size:.95rem}
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
@@ -94,8 +96,8 @@ footer a{color:#fff}
 
 @media (max-width:860px){
   .hero .wrap,.order{grid-template-columns:1fr}
-  .grid3,.steps ol{grid-template-columns:1fr}
-  .hero svg{max-width:340px;margin-inline:auto}
+  .steps ol{grid-template-columns:1fr}
+  .hero img{width:min(320px,80%);order:-1}
   .nav ul{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
@@ -107,7 +109,7 @@ footer a{color:#fff}
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#inicio">Canastas Navideñas Huancayo</a>
+    <a class="brand" href="#inicio">Canastas Navideñas Huancayo</a>
     <nav aria-label="Principal">
       <ul>
         <li><a href="#canastas">Canastas</a></li>
@@ -124,90 +126,22 @@ footer a{color:#fff}
     <div class="wrap">
       <div>
         <h1>La Navidad se regala con una canasta llena.</h1>
-        <p>Armamos cada canasta a mano con panetón, chocolate y los sabores de la cena. Tú eliges, nosotros la llevamos a la puerta de quien más quieres.</p>
+        <p>Desde 2012 armamos canastas con los productos de la cena de fin de año. Tú eliges, nosotros la llevamos a la puerta de quien más quieres.</p>
         <div class="actions">
           <a class="btn" href="#pedido">Pedir mi canasta</a>
           <a class="btn ghost" href="#canastas">Ver las canastas</a>
         </div>
       </div>
-      <svg viewBox="0 0 400 380" role="img" aria-label="Ilustración de una canasta con panetón, botella y frascos">
-        <!-- productos -->
-        <rect x="95" y="70" width="110" height="120" rx="10" fill="#B3203A"/>
-        <rect x="95" y="105" width="110" height="22" fill="#D9A441"/>
-        <rect x="95" y="70" width="110" height="26" rx="10" fill="#8F1A2F"/>
-        <rect x="235" y="40" width="46" height="150" rx="8" fill="#2E7D5B"/>
-        <rect x="248" y="14" width="20" height="36" rx="4" fill="#2E7D5B"/>
-        <rect x="246" y="10" width="24" height="10" rx="3" fill="#D9A441"/>
-        <rect x="240" y="95" width="36" height="40" fill="#F5F8F7"/>
-        <rect x="292" y="110" width="58" height="80" rx="8" fill="#E8C27A"/>
-        <rect x="292" y="104" width="58" height="14" rx="4" fill="#B3203A"/>
-        <!-- cesta -->
-        <path d="M40 175 H360 L328 340 Q324 358 304 358 H96 Q76 358 72 340 Z" fill="#B27A3C"/>
-        <g stroke="#8A5A28" stroke-width="5" fill="none" stroke-linecap="round">
-          <path d="M52 215 H348"/><path d="M60 255 H340"/><path d="M67 295 H333"/><path d="M74 332 H326"/>
-          <path d="M110 180 L100 350"/><path d="M165 180 L160 355"/><path d="M220 180 V355"/><path d="M275 180 L280 355"/><path d="M330 180 L318 350"/>
-        </g>
-        <rect x="32" y="165" width="336" height="20" rx="10" fill="#C98F4A"/>
-        <!-- moño -->
-        <path d="M200 250 L150 225 L150 275 Z" fill="#B3203A"/>
-        <path d="M200 250 L250 225 L250 275 Z" fill="#B3203A"/>
-        <circle cx="200" cy="250" r="14" fill="#8F1A2F"/>
-      </svg>
+      <img src="imagenes/logo.webp" width="1045" height="1024" alt="Logo de Canastas Navideñas Huancayo: caja de regalo con árbol de Navidad, desde 2012">
     </div>
   </div>
 
   <section id="canastas">
     <div class="wrap">
       <h2>Elige tu canasta</h2>
-      <p class="lead">Tres tamaños para cada mesa. Todos los productos llegan sellados y con tarjeta de dedicatoria.</p>
-
-      <div class="grid3">
-        <article class="card">
-          <h3>Canasta Duende</h3>
-          <p class="who">Para 3 o 4 personas</p>
-          <p class="price">S/ 89</p>
-          <ul>
-            <li>Panetón de 500 g</li>
-            <li>Chocolate para taza</li>
-            <li>Galletas surtidas</li>
-            <li>Mermelada de fresa</li>
-            <li>Leche evaporada (2 latas)</li>
-          </ul>
-          <button class="btn ghost" data-pick="Canasta Familiar">Pedir esta canasta</button>
-        </article>
-
-        <article class="card feat">
-          <span class="tag">Recomendada</span>
-          <h3>Canasta Papa Noel</h3>
-          <p class="who">Para 6 u 8 personas</p>
-          <p class="price">S/ 149</p>
-          <ul>
-            <li>Panetón de 900 g</li>
-            <li>Chocolate para taza</li>
-            <li>Turrón</li>
-            <li>Frutos secos</li>
-            <li>Café molido</li>
-            <li>Galletas y mermelada</li>
-          </ul>
-          <button class="btn" data-pick="Canasta Festiva">Pedir esta canasta</button>
-        </article>
-
-        <article class="card">
-          <h3>Canasta Premium</h3>
-          <p class="who">Para regalar o para la empresa</p>
-          <p class="price">S/ 249</p>
-          <ul>
-            <li>Panetón artesanal de 1 kg</li>
-            <li>Sidra de 750 ml*</li>
-            <li>Frutos secos selectos</li>
-            <li>Chocolates finos</li>
-            <li>Aceite de oliva</li>
-            <li>Té en hebras</li>
-          </ul>
-          <button class="btn ghost" data-pick="Canasta Premium">Pedir esta canasta</button>
-        </article>
-      </div>
-      <p class="small">* Solo para mayores de 18 años. Precios y contenido de ejemplo: cámbialos por los tuyos. ¿Pedido para empresa con más de 10 canastas? Escríbenos y armamos una cotización.</p>
+      <p class="lead">Siete canastas en tres líneas. Abre «Ver los 7 productos» para saber qué trae cada una.</p>
+      <div id="catalogo"></div>
+      <p class="small">* Solo para mayores de 18 años. Las marcas pueden variar según disponibilidad. Precios y contenido de ejemplo: edítalos en el bloque CATALOGO del código. ¿Pedido para empresa con más de 10 canastas? Escríbenos y armamos una cotización.</p>
     </div>
   </section>
 
@@ -231,26 +165,12 @@ footer a{color:#fff}
       </div>
       <form id="form" novalidate>
         <div class="row">
-          <label>Canasta
-            <select id="canasta" required>
-              <option value="Canasta Familiar" data-p="89">Familiar · S/ 89</option>
-              <option value="Canasta Festiva" data-p="149" selected>Festiva · S/ 149</option>
-              <option value="Canasta Premium" data-p="249">Premium · S/ 249</option>
-            </select>
-          </label>
-          <label>Cantidad
-            <input id="cant" type="number" min="1" max="50" value="1" required>
-          </label>
+          <label>Canasta <select id="canasta" required></select></label>
+          <label>Cantidad <input id="cant" type="number" min="1" max="50" value="1" required></label>
         </div>
-        <label>Tu nombre
-          <input id="nombre" type="text" autocomplete="name" required>
-        </label>
-        <label>Dirección o zona de entrega
-          <input id="dir" type="text" autocomplete="street-address" required>
-        </label>
-        <label>Dedicatoria (opcional)
-          <textarea id="ded" rows="2" maxlength="140"></textarea>
-        </label>
+        <label>Tu nombre <input id="nombre" type="text" autocomplete="name" required></label>
+        <label>Dirección o zona de entrega <input id="dir" type="text" autocomplete="street-address" required></label>
+        <label>Dedicatoria (opcional) <textarea id="ded" rows="2" maxlength="140"></textarea></label>
         <p class="total" id="total" aria-live="polite"></p>
         <p class="hint" id="err" role="alert" style="color:var(--berry-d)"></p>
         <button class="btn" type="submit">Enviar pedido por WhatsApp</button>
@@ -271,53 +191,108 @@ footer a{color:#fff}
 
 <footer>
   <div class="wrap">
-    <span>© Canastas Navideñas Huancayo 2026 - Miguelh20</span>
+    <span>© 2026 Canastas Navideñas Huancayo · Compartimos más que regalos</span>
     <span>Pedidos: <a id="wa-foot" href="#">WhatsApp</a></span>
   </div>
 </footer>
 
 <script>
-  // === EDITA ESTOS DOS DATOS ===
-  // Número con código de país y sin "+" ni espacios (ejemplo de Perú: 51 + 9 dígitos).
-  var WHATSAPP = "+51981327561";
+  // === EDITA ESTOS DATOS ===
+  var WHATSAPP = "51900000000"; // código de país + número, sin "+" ni espacios
   var NEGOCIO = "Canastas Navideñas Huancayo";
 
+  // Catálogo: una sola fuente para las tarjetas y el formulario.
+  // La foto de cada canasta está en imagenes/canastas/ (reemplaza el archivo con el mismo nombre).
+  var CATALOGO = [
+    { linea: "Línea Duende", texto: "Lo esencial para la mesa de fin de año.", canastas: [
+      { n: "Duende 1", p: 79, para: "Para 2 o 3 personas", img: "duende-1.webp",
+        prod: ["Panetón", "Aceite vegetal", "Arroz", "Azúcar rubia", "Avena", "Leche evaporada", "Atún en conserva"] },
+      { n: "Duende 2", p: 99, para: "Para 3 o 4 personas", img: "duende-2.webp",
+        prod: ["Panetón", "Aceite vegetal", "Arroz", "Azúcar rubia", "Fideos", "Chocolate para taza", "Galletas de soda"] }
+    ]},
+    { linea: "Línea PapaNoel", texto: "Más variedad para compartir en familia.", canastas: [
+      { n: "PapaNoelito", p: 129, para: "Para 4 o 5 personas", img: "papanoelito.webp",
+        prod: ["Panetón", "Aceite vegetal", "Spaghetti", "Duraznos en almíbar", "Galletas rellenas", "Mermelada de fresa", "Leche evaporada"] },
+      { n: "PapaNoel", p: 169, para: "Para 5 o 6 personas", img: "papanoel.webp",
+        prod: ["Panetón", "Vino rosado*", "Aceite vegetal", "Spaghetti", "Duraznos en almíbar", "Atún en conserva", "Té de manzanilla"] }
+    ]},
+    { linea: "Línea Noche Buena", texto: "Para la cena y para regalar con estilo.", canastas: [
+      { n: "Noche Buena", p: 199, para: "Para 6 u 8 personas", img: "noche-buena.webp",
+        prod: ["Panetón", "Vino rosado*", "Aceite vegetal", "Spaghetti", "Duraznos en almíbar", "Mermelada de fresa", "Leche evaporada"] },
+      { n: "Noche Buena Full", p: 259, para: "Para 8 o 10 personas", img: "noche-buena-full.webp",
+        prod: ["Panetón", "Vino rosado*", "Aceite vegetal", "Spaghetti", "Duraznos en almíbar", "Yogurt", "Galletas rellenas"] },
+      { n: "Noche Buena Vip", p: 339, para: "Para regalar o para la empresa", img: "noche-buena-vip.webp",
+        prod: ["Panetón", "Vino rosado*", "Aceite vegetal", "Spaghetti", "Duraznos en almíbar", "Chocolate para taza", "Mermelada de fresa"] }
+    ]}
+  ];
+
   var $ = function (id) { return document.getElementById(id); };
-  var sel = $("canasta"), cant = $("cant");
+  var sel = $("canasta"), cant = $("cant"), cat = $("catalogo");
+  var precios = {};
+
+  function el(tag, cls, txt) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (txt) e.textContent = txt;
+    return e;
+  }
+
+  CATALOGO.forEach(function (f) {
+    var sec = el("div", "familia");
+    sec.appendChild(el("h3", "", f.linea));
+    sec.appendChild(el("p", "", f.texto));
+    var grid = el("div", "grid");
+    f.canastas.forEach(function (c) {
+      precios[c.n] = c.p;
+      var o = el("option", "", c.n + " · S/ " + c.p); o.value = c.n; sel.appendChild(o);
+
+      var card = el("article", "card");
+      var foto = el("div", "foto"), img = document.createElement("img");
+      img.src = "imagenes/canastas/" + c.img; img.alt = "Canasta " + c.n + " con sus productos"; img.loading = "lazy";
+      foto.appendChild(img);
+      var cuerpo = el("div", "cuerpo");
+      cuerpo.appendChild(el("h4", "", c.n));
+      cuerpo.appendChild(el("p", "para", c.para));
+      cuerpo.appendChild(el("p", "price", "S/ " + c.p));
+      var det = el("details"), sum = el("summary", "", "Ver los 7 productos"), ul = el("ul");
+      c.prod.forEach(function (x) { ul.appendChild(el("li", "", x)); });
+      det.appendChild(sum); det.appendChild(ul);
+      var b = el("button", "btn", "Pedir esta canasta"); b.type = "button";
+      b.addEventListener("click", function () {
+        sel.value = c.n; pintarTotal();
+        $("pedido").scrollIntoView({ behavior: "smooth" });
+        $("nombre").focus({ preventScroll: true });
+      });
+      cuerpo.appendChild(det); cuerpo.appendChild(b);
+      card.appendChild(foto); card.appendChild(cuerpo);
+      grid.appendChild(card);
+    });
+    sec.appendChild(grid);
+    cat.appendChild(sec);
+  });
+  sel.value = "Noche Buena";
 
   function pintarTotal() {
-    var p = Number(sel.options[sel.selectedIndex].dataset.p);
     var n = Math.max(1, parseInt(cant.value, 10) || 1);
-    $("total").textContent = "Total estimado: S/ " + (p * n) + " (sin envío)";
+    $("total").textContent = "Total estimado: S/ " + (precios[sel.value] * n) + " (sin envío)";
   }
   sel.addEventListener("change", pintarTotal);
   cant.addEventListener("input", pintarTotal);
   pintarTotal();
 
-  document.querySelectorAll("[data-pick]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      sel.value = b.dataset.pick;
-      pintarTotal();
-      $("pedido").scrollIntoView({ behavior: "smooth" });
-      $("nombre").focus({ preventScroll: true });
-    });
-  });
-
   $("wa-foot").href = "https://wa.me/" + WHATSAPP;
 
   $("form").addEventListener("submit", function (e) {
     e.preventDefault();
-    var nombre = $("nombre").value.trim(), dir = $("dir").value.trim();
-    var n = parseInt(cant.value, 10);
+    var nombre = $("nombre").value.trim(), dir = $("dir").value.trim(), n = parseInt(cant.value, 10);
     if (!nombre || !dir || !n || n < 1) {
       $("err").textContent = "Completa tu nombre, la dirección y una cantidad válida.";
       return;
     }
     $("err").textContent = "";
+    var ded = $("ded").value.trim();
     var msg = "Hola " + NEGOCIO + ", quiero pedir " + n + " × " + sel.value + ".\n" +
-              "Nombre: " + nombre + "\n" +
-              "Entrega en: " + dir +
-              ($("ded").value.trim() ? "\nDedicatoria: " + $("ded").value.trim() : "");
+              "Nombre: " + nombre + "\nEntrega en: " + dir + (ded ? "\nDedicatoria: " + ded : "");
     window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
   });
 </script>
