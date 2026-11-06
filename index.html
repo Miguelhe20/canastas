@@ -8,7 +8,7 @@
 <link rel="icon" href="imagenes/logo.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Young+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Figtree:wght@400;500;700&family=Young+Serif&display=swap" rel="stylesheet">
 <style>
 :root{
   --spruce:#123B33; --berry:#B3203A; --berry-d:#8F1A2F; --gold:#D9A441;
@@ -34,7 +34,8 @@ h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.6rem}
 .notice{background:var(--berry);color:#fff;text-align:center;font-size:.95rem;padding:.55rem 1rem}
 header{background:var(--spruce);color:#fff;position:sticky;top:0;z-index:20;border-bottom:3px solid var(--gold)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
-.brand{font-family:var(--display);font-size:1.4rem;color:#fff;text-decoration:none;letter-spacing:.01em}
+.brand{font-family:"Cinzel","Trajan Pro",Georgia,"Times New Roman",serif;font-weight:700;font-size:1.3rem;color:#E8C27A;text-decoration:none;letter-spacing:.06em;line-height:1.2}
+.brand:hover{color:#F3D590}
 .nav ul{list-style:none;display:flex;align-items:center;gap:1.6rem;padding:0}
 .nav ul a{font-weight:500;color:#E3EEEA;text-decoration:none;padding:.35rem 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
 .nav ul a:hover{color:#fff;border-bottom-color:var(--gold)}
@@ -102,6 +103,7 @@ footer a{color:#fff}
   .steps ol{grid-template-columns:1fr}
   .hero img{width:min(320px,80%);order:-1}
   header{position:static}
+  .brand{font-size:1.1rem}
   .nav{flex-direction:column;align-items:flex-start;gap:.3rem;padding:.8rem 0}
   .nav ul{gap:1.1rem;overflow-x:auto;max-width:100%;white-space:nowrap}
 }
