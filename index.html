@@ -56,10 +56,10 @@ section{padding:4.5rem 0}
 .familia{margin-top:2.8rem}
 .familia h3{font-size:1.7rem;border-bottom:3px solid var(--gold);padding-bottom:.4rem;display:inline-block}
 .familia > p{color:var(--muted);margin:.5rem 0 1.2rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1.5rem;align-items:start}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
-.card .foto{background:#fff;aspect-ratio:3/2;border-bottom:1px solid var(--line)}
-.card .foto img{width:100%;height:100%;object-fit:contain}
+.card .foto{background:#fff;aspect-ratio:16/9;border-bottom:1px solid var(--line)}
+.card .foto img{width:100%;height:100%;object-fit:cover}
 .card .cuerpo{padding:1.2rem 1.4rem 1.4rem;display:flex;flex-direction:column;flex:1}
 .card h4{font-family:var(--display);font-weight:400;font-size:1.5rem}
 .card .para{color:var(--muted);font-size:.95rem}
@@ -69,7 +69,7 @@ section{padding:4.5rem 0}
 .card summary::-webkit-details-marker{display:none}
 .card summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--berry)}
 .card details[open] summary::after{content:"–"}
-.card ul{padding-left:1.2rem;margin-top:.6rem}
+.card ul{padding-left:1.2rem;padding-right:.5rem;margin-top:.6rem;max-height:22rem;overflow-y:auto}
 .card li{margin-bottom:.25rem}
 .small{font-size:.9rem;color:var(--muted);margin-top:1.6rem}
 
@@ -167,9 +167,9 @@ footer a{color:#fff}
   <section id="canastas">
     <div class="wrap">
       <h2>Elige tu canasta</h2>
-      <p class="lead">Siete canastas en tres líneas. Abre «Ver los 7 productos» para saber qué trae cada una.</p>
+      <p class="lead">Siete canastas en tres líneas: Bronce, Plata y Oro. Abre «Ver los productos» para saber qué trae cada una.</p>
       <div id="catalogo"></div>
-      <p class="small">* Solo para mayores de 18 años. Las marcas pueden variar según disponibilidad. Precios y contenido de ejemplo: edítalos en el bloque CATALOGO del código. ¿Pedido para empresa con más de 10 canastas? Escríbenos y armamos una cotización.</p>
+      <p class="small">* Solo para mayores de 18 años. Las marcas pueden variar según disponibilidad. ¿Pedido para empresa con más de 10 canastas? Escríbenos y armamos una cotización.</p>
     </div>
   </section>
 
@@ -219,39 +219,255 @@ footer a{color:#fff}
 
 <footer>
   <div class="wrap">
-    <span>© Canastas Navideñas Huancayo 2026 - Miguelh20 · Compartimos más que regalos</span>
+    <span>© 2026 Canastas Navideñas Huancayo · Compartimos más que regalos</span>
     <span>Pedidos: <a id="wa-foot" href="#">WhatsApp</a></span>
   </div>
 </footer>
 
 <script>
   // === EDITA ESTOS DATOS ===
-  var WHATSAPP = "+51981327561"; // código de país + número, sin "+" ni espacios
+  var WHATSAPP = "51900000000"; // código de país + número, sin "+" ni espacios
   var NEGOCIO = "Canastas Navideñas Huancayo";
 
   // Catálogo: una sola fuente para las tarjetas y el formulario.
   // La foto de cada canasta está en imagenes/canastas/ (reemplaza el archivo con el mismo nombre).
   var CATALOGO = [
-    { linea: "Línea Duende", texto: "Lo esencial para la mesa de fin de año.", canastas: [
-      { n: "Duende 1", p: 79, para: "Para 2 o 3 personas", img: "duende-1.webp",
-        prod: ["Panetón", "Aceite vegetal", "Arroz", "Azúcar rubia", "Avena", "Leche evaporada", "Atún en conserva"] },
-      { n: "Duende 2", p: 99, para: "Para 3 o 4 personas", img: "duende-2.webp",
-        prod: ["Panetón", "Aceite vegetal", "Arroz", "Azúcar rubia", "Fideos", "Chocolate para taza", "Galletas de soda"] }
-    ]},
-    { linea: "Línea PapaNoel", texto: "Más variedad para compartir en familia.", canastas: [
-      { n: "PapaNoelito", p: 129, para: "Para 4 o 5 personas", img: "papanoelito.webp",
-        prod: ["Panetón", "Aceite vegetal", "Spaghetti", "Duraznos en almíbar", "Galletas rellenas", "Mermelada de fresa", "Leche evaporada"] },
-      { n: "PapaNoel", p: 169, para: "Para 5 o 6 personas", img: "papanoel.webp",
-        prod: ["Panetón", "Vino rosado*", "Aceite vegetal", "Spaghetti", "Duraznos en almíbar", "Atún en conserva", "Té de manzanilla"] }
-    ]},
-    { linea: "Línea Noche Buena", texto: "Para la cena y para regalar con estilo.", canastas: [
-      { n: "Noche Buena", p: 199, para: "Para 6 u 8 personas", img: "noche-buena.webp",
-        prod: ["Panetón", "Vino rosado*", "Aceite vegetal", "Spaghetti", "Duraznos en almíbar", "Mermelada de fresa", "Leche evaporada"] },
-      { n: "Noche Buena Full", p: 259, para: "Para 8 o 10 personas", img: "noche-buena-full.webp",
-        prod: ["Panetón", "Vino rosado*", "Aceite vegetal", "Spaghetti", "Duraznos en almíbar", "Yogurt", "Galletas rellenas"] },
-      { n: "Noche Buena Vip", p: 339, para: "Para regalar o para la empresa", img: "noche-buena-vip.webp",
-        prod: ["Panetón", "Vino rosado*", "Aceite vegetal", "Spaghetti", "Duraznos en almíbar", "Chocolate para taza", "Mermelada de fresa"] }
-    ]}
+    {
+      "linea": "Línea Bronce",
+      "color": "#B0733A",
+      "texto": "Lo esencial para la mesa de fin de año.",
+      "canastas": [
+        {
+          "n": "Chispa de Navidad",
+          "p": 80,
+          "para": "Para 2 o 3 personas",
+          "img": "chispa-de-navidad.webp",
+          "prod": [
+            "Panetón Buon Natale en bolsa",
+            "Azúcar rubia Cartavio - 1 kg",
+            "Arroz Costeño Extra - 750 g",
+            "Leche Gloria en tarro",
+            "Fideos cortos - Molitalia",
+            "Chocolate para taza - Sol del Cuzco",
+            "Mermelada Compass 320 g",
+            "Galleta soda Field",
+            "Galleta navideña - Colombina",
+            "Caja navideña",
+            "Moño para caja navideña"
+          ]
+        },
+        {
+          "n": "Mesa Feliz",
+          "p": 105,
+          "para": "Para 3 o 4 personas",
+          "img": "mesa-feliz.webp",
+          "prod": [
+            "Panetón Blanca Flor en bolsa",
+            "Azúcar rubia Cartavio - 1 kg",
+            "Arroz Costeño Superior - 750 g",
+            "Leche Gloria en tarro",
+            "Fideos cortos - Molitalia",
+            "Chocolate para taza - Sol del Cuzco",
+            "Mermelada Compass 320 g",
+            "Galleta navideña - Colombina",
+            "Aceite Cocinero vegetal - 900 ml",
+            "Avena 3 Ositos - 270 g",
+            "Gelatina Universal - 130 g",
+            "Caja navideña",
+            "Moño para caja navideña"
+          ]
+        }
+      ]
+    },
+    {
+      "linea": "Línea Plata",
+      "color": "#9AA5A8",
+      "texto": "Más variedad para compartir en familia.",
+      "canastas": [
+        {
+          "n": "Tradición Wanka",
+          "p": 145,
+          "para": "Para 4 o 5 personas",
+          "img": "tradicion-wanka.webp",
+          "prod": [
+            "Panetón Todinno en bolsa",
+            "Azúcar rubia Cartavio - 1 kg",
+            "Arroz Costeño Superior - 750 g",
+            "Leche Gloria en tarro",
+            "Fideos cortos - Molitalia",
+            "Chocolate para taza - Sol del Cuzco",
+            "Mermelada Gloria 320 g",
+            "Galleta navideña - Colombina",
+            "Aceite Primor - 900 ml",
+            "Avena 3 Ositos - 270 g",
+            "Gelatina Universal - 130 g",
+            "Anís filtrante McColin's x 25 und.",
+            "Manzanilla filtrante McColin's x 25 und.",
+            "Chocolate Vizzio 63 g",
+            "Vino o espumante Santiago Queirolo*",
+            "Salsa Pomarola 160 g",
+            "Atún Florida en trozos",
+            "Caja navideña",
+            "Moño para caja navideña"
+          ]
+        },
+        {
+          "n": "Abrazo de Nochebuena",
+          "p": 175,
+          "para": "Para 5 o 6 personas",
+          "img": "abrazo-de-nochebuena.webp",
+          "prod": [
+            "Panetón D'Onofrio en bolsa",
+            "Azúcar rubia Cartavio - 1 kg",
+            "Arroz Costeño Superior - 750 g",
+            "Leche Gloria en tarro",
+            "Fideos cortos - Molitalia",
+            "Chocolate para taza - Sol del Cuzco",
+            "Mermelada Gloria 320 g",
+            "Galleta navideña - Colombina",
+            "Aceite Primor - 900 ml",
+            "Avena 3 Ositos - 270 g",
+            "Gelatina Universal - 130 g",
+            "Anís filtrante McColin's x 25 und.",
+            "Manzanilla filtrante McColin's x 25 und.",
+            "Chocolate Vizzio 63 g",
+            "Salsa Pomarola 160 g",
+            "Vino o espumante Santiago Queirolo*",
+            "Spaghetti Don Vittorio 500 g",
+            "Yogurt Gloria - 1 L",
+            "Mazamorra morada Universal 150 g",
+            "Conserva de duraznos - Compass 820 g",
+            "Galleta soda Field",
+            "Atún Florida en trozos - 140 g",
+            "Caja navideña",
+            "Moño para caja navideña"
+          ]
+        },
+        {
+          "n": "Festín del Valle",
+          "p": 190,
+          "para": "Para 6 u 8 personas",
+          "img": "festin-del-valle.webp",
+          "prod": [
+            "Panetón D'Onofrio en caja",
+            "Azúcar rubia Cartavio - 1 kg",
+            "Arroz Costeño Superior - 750 g",
+            "Leche Gloria en tarro",
+            "Fideos cortos - Molitalia",
+            "Chocolate para taza - Sol del Cuzco",
+            "Galleta Field",
+            "Aceite Primor",
+            "Avena 3 Ositos - 270 g",
+            "Mermelada Gloria en vaso - 320 g",
+            "Anís filtrante McColin's x 25 und.",
+            "Manzanilla filtrante McColin's x 25 und.",
+            "Salsa Pomarola 160 g",
+            "Spaghetti Don Vittorio 500 g",
+            "Gelatina Universal - 2 L",
+            "Vino o espumante Santiago Queirolo*",
+            "Yogurt Gloria - 1 L",
+            "Mazamorra morada",
+            "Conserva de duraznos - Compass",
+            "Atún Gloria en trozos",
+            "Chocolate Vizzio 63 g",
+            "Galleta navideña - Colombina",
+            "Mantequilla Dorina 220 g",
+            "Galletas Oreo x 6 und.",
+            "Bebida de naranja Gloria - 1 L",
+            "Caja navideña",
+            "Moño para caja navideña"
+          ]
+        }
+      ]
+    },
+    {
+      "linea": "Línea Oro",
+      "color": "#D9A441",
+      "texto": "Para la cena y para regalar con estilo.",
+      "canastas": [
+        {
+          "n": "Noche Buena Full",
+          "p": 275,
+          "para": "Para 8 o 10 personas",
+          "img": "noche-buena-full.webp",
+          "prod": [
+            "Panetón D'Onofrio en caja",
+            "Azúcar rubia Cartavio - 1 kg",
+            "Arroz Costeño Superior - 750 g",
+            "Leche Gloria en tarro",
+            "Fideos cortos - Molitalia",
+            "Chocolate para taza - Sol del Cuzco",
+            "Galleta Field",
+            "Aceite Primor",
+            "Avena 3 Ositos - 270 g",
+            "Mermelada Gloria - 1 kg",
+            "Anís filtrante McColin's x 100 und.",
+            "Manzanilla filtrante McColin's x 100 und.",
+            "Salsa Pomarola 160 g",
+            "Spaghetti Don Vittorio 500 g",
+            "Gelatina Universal - 2 L",
+            "Vino o espumante Santiago Queirolo*",
+            "Yogurt Gloria - 1 L",
+            "Mazamorra morada",
+            "Conserva de duraznos - Compass",
+            "Atún Florida en trozos",
+            "Mantequilla Dorina 220 g",
+            "Bebida de naranja Gloria - 1 L",
+            "Chocman x 6 und.",
+            "Pan de semillas Bimbo Vital",
+            "Leche entera en caja Gloria - 1 L",
+            "Galleta Cream Crackers 258 g",
+            "Chocolate Vizzio 63 g",
+            "Galleta navideña - Colombina",
+            "Cesto navideño",
+            "Moño para caja navideña"
+          ]
+        },
+        {
+          "n": "Estrella Imperial",
+          "p": 330,
+          "para": "Para regalar o para la empresa",
+          "img": "estrella-imperial.webp",
+          "prod": [
+            "Panetón D'Onofrio en caja",
+            "Azúcar rubia Cartavio - 1 kg",
+            "Arroz Costeño Superior - 750 g",
+            "Leche Gloria en tarro",
+            "Fideos cortos - Molitalia",
+            "Chocolate para taza - Sol del Cuzco",
+            "Galleta Soda V",
+            "Aceite Primor",
+            "Avena 3 Ositos - 270 g",
+            "Mermelada en vaso Compass - 320 g",
+            "Anís filtrante McColin's x 100 und.",
+            "Manzanilla filtrante McColin's x 100 und.",
+            "Salsa Pomarola 160 g",
+            "Spaghetti Don Vittorio 500 g",
+            "Gelatina Universal - 2 L",
+            "Vino o espumante Santiago Queirolo*",
+            "Yogurt Gloria - 1 L",
+            "Mazamorra morada",
+            "Conserva de duraznos - Compass",
+            "Atún Gloria en trozos",
+            "Mantequilla Dorina 220 g",
+            "Bebida de naranja Gloria - 1 L",
+            "Chocman x 6 und.",
+            "Pan de semillas Bimbo Vital",
+            "Leche entera en caja Gloria - 1 L",
+            "Galleta Cream Crackers 258 g",
+            "Café Ecco - 170 g",
+            "Milo granulado - 380 g (lata)",
+            "Galleta vainilla Costa x 6 und.",
+            "Dulces navideños",
+            "Pringles grande",
+            "Chocolate Vizzio 63 g",
+            "Galleta navideña - Colombina",
+            "Cesto navideño",
+            "Moño para caja navideña"
+          ]
+        }
+      ]
+    }
   ];
 
   var $ = function (id) { return document.getElementById(id); };
@@ -267,7 +483,7 @@ footer a{color:#fff}
 
   CATALOGO.forEach(function (f) {
     var sec = el("div", "familia");
-    sec.appendChild(el("h3", "", f.linea));
+    var h = el("h3", "", f.linea); h.style.borderBottomColor = f.color; sec.appendChild(h);
     sec.appendChild(el("p", "", f.texto));
     var grid = el("div", "grid");
     f.canastas.forEach(function (c) {
@@ -282,7 +498,7 @@ footer a{color:#fff}
       cuerpo.appendChild(el("h4", "", c.n));
       cuerpo.appendChild(el("p", "para", c.para));
       cuerpo.appendChild(el("p", "price", "S/ " + c.p));
-      var det = el("details"), sum = el("summary", "", "Ver los 7 productos"), ul = el("ul");
+      var det = el("details"), sum = el("summary", "", "Ver los " + c.prod.length + " productos"), ul = el("ul");
       c.prod.forEach(function (x) { ul.appendChild(el("li", "", x)); });
       det.appendChild(sum); det.appendChild(ul);
       var b = el("button", "btn", "Pedir esta canasta"); b.type = "button";
@@ -298,8 +514,7 @@ footer a{color:#fff}
     sec.appendChild(grid);
     cat.appendChild(sec);
   });
-  sel.value = "Noche Buena";
-
+  
   function pintarTotal() {
     var n = Math.max(1, parseInt(cant.value, 10) || 1);
     $("total").textContent = "Total estimado: S/ " + (precios[sel.value] * n) + " (sin envío)";
